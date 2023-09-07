@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">pedidos</string>
+    <string name="cargar">Cargar</string>
+    <string name="Seña">Seña</string>
+    <string name="Total">Total</string>
+    <string name="Plataforma">Plataforma</string>
+    <string name="Cliente">Cliente</string>
+    <string name="Pedido">Pedido</string>
+    <string name="Fecha">Fecha</string>
+    <string name="Title">PEDIDOS</string>
+
+</resources>
