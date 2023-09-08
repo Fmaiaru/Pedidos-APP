@@ -2,7 +2,11 @@ package com.example.pedidos;
 
 public class Users {
     private String id, fecha, pedido, cliente, plataforma, total, seña;
-}
+
+    public Users() {
+    }
+
+
 
     public Users(String id, String fecha, String pedido, String cliente, String plataforma, String total, String seña) {
         this.id = id;
@@ -13,6 +17,8 @@ public class Users {
         this.total = total;
         this.seña = seña;
     }
+
+
 
     public String getId() {
         return id;
@@ -70,7 +76,5 @@ public class Users {
         this.seña = seña;
     }
 
-    public Users() {
-    }
 
 }
