@@ -24,14 +24,17 @@
         android:id="@+id/floatbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="580dp"
         android:clickable="true"
         android:contentDescription="@string/floatBtn"
         android:focusable="true"
         android:src="@android:drawable/ic_input_add"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="326dp"
         tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
