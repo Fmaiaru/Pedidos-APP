@@ -1,10 +1,14 @@
 package com.example.pedidos;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -36,6 +40,32 @@ Users usuarios;
         list=findViewById(R.id.Listview);
         adaptador=new Adaptador(this,users);
         list.setAdapter(adaptador);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                AlertDialog.Builder builder=new AlertDialog.Builder(view.getContext());
+                ProgressDialog progressDialog=new ProgressDialog(view.getContext());
+                CharSequence[]dialogoItem={"Ver datos","Editar datos", "Eliminar datos"};
+                builder.setTitle(users.get(position).getCliente());
+                builder.setItems(dialogoItem, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+                        switch (i){
+                            case 0:
+                                break;
+                            case 1:
+                                break;
+                            case 2:
+                                break;
+                        }
+
+                    }
+                });
+                builder.create().show();
+
+
+            }
+        });
         mostrardatos();
     }
     public void mostrardatos(){
