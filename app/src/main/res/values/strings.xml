@@ -9,5 +9,7 @@
     <string name="Fecha">Fecha</string>
     <string name="Title">PEDIDOS</string>
     <string name="floatBtn">+</string>
+    <string name="modificar">Modificar</string>
+    <string name="id">  ID</string>
 
 </resources>

@@ -52,8 +52,10 @@ Users usuarios;
                     public void onClick(DialogInterface dialog, int i) {
                         switch (i){
                             case 0:
+                            startActivity( new Intent(getApplicationContext(), Detalles.class).putExtra("position",position));
                                 break;
                             case 1:
+                                startActivity( new Intent(getApplicationContext(), Editar.class).putExtra("position",position));
                                 break;
                             case 2:
                                 break;

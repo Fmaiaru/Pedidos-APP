@@ -31,6 +31,7 @@ public class insertar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         txtDate = findViewById(R.id.txtDate);
         txtPedido = findViewById(R.id.txtPedido);
         txtCliente = findViewById(R.id.txtCliente);

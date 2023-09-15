@@ -16,6 +16,12 @@
         android:theme="@style/Theme.Pedidos"
         tools:targetApi="31">
         <activity
+            android:name=".Editar"
+            android:exported="true" />
+        <activity
+            android:name=".Detalles"
+            android:exported="true" />
+        <activity
             android:name=".Home"
             android:exported="true">
             <intent-filter>
@@ -26,8 +32,8 @@
         </activity>
         <activity
             android:name=".insertar"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
+
     </application>
 
 </manifest>
