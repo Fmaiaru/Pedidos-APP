@@ -54,6 +54,7 @@ public class Editar extends AppCompatActivity {
         txtSeña.setText(Home.users.get(position).getSeña());
     }
     public void actualizar(View view) {
+        final String id=txtId.getText().toString();
         final String fecha=txtDate.getText().toString();
         final String pedido=txtPedido.getText().toString();
         final String cliente=txtCliente.getText().toString();
@@ -95,7 +96,7 @@ public class Editar extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
 
                 Map<String,String> params = new HashMap<String,String>();
-
+                params.put("id",id);
                 params.put("fecha",fecha);
                 params.put("pedido",pedido);
                 params.put("cliente",cliente);

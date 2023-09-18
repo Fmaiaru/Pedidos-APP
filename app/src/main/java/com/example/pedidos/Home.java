@@ -1,5 +1,8 @@
 package com.example.pedidos;
 
+import static com.google.android.material.color.utilities.MaterialDynamicColors.error;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -24,6 +28,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Home extends AppCompatActivity {
     private ListView list;
@@ -58,6 +64,7 @@ Users usuarios;
                                 startActivity( new Intent(getApplicationContext(), Editar.class).putExtra("position",position));
                                 break;
                             case 2:
+                                EliminarDatos(users.get(position).getId());
                                 break;
                         }
 
@@ -69,6 +76,43 @@ Users usuarios;
             }
         });
         mostrardatos();
+    }
+
+    private void EliminarDatos(final String id) {
+        StringRequest request = new StringRequest(Request.Method.POST,"https://pedidoshade.000webhostapp.com/CRUD/eliminar.php", new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                if (response.equalsIgnoreCase("datos eliminados")) {
+                    Toast.makeText(Home.this, "eliminando", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getApplicationContext(), Home.class));
+                } else {
+                    Toast.makeText(Home.this, "no se pudo eliminar", Toast.LENGTH_SHORT).show();
+                }
+            }
+        },
+            new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(Home.this,"error",Toast.LENGTH_SHORT).show();
+
+                }
+
+        }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String>params=new HashMap<>();
+                params.put("id",id);
+                return params;
+            }
+        };
+        RequestQueue requestQueue=Volley.newRequestQueue(this);
+        requestQueue.add(request);
+    }
+
+    public  void  agregar (View view){
+    startActivity(new Intent(getApplicationContext(), insertar.class));
     }
     public void mostrardatos(){
         StringRequest request=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
