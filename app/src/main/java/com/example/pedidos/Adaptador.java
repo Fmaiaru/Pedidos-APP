@@ -30,10 +30,9 @@ public class Adaptador extends ArrayAdapter<Users> {
         TextView tvId = view.findViewById(R.id.tvId);
         TextView tvCliente = view.findViewById(R.id.tvCliente);
 
-        tvId.setText(arrayalistaUsers.get(position).getId());
-        tvCliente.setText(arrayalistaUsers.get(position).getCliente());
-        return view;
-        //return super.getView(position, convertView, parent)//
+    tvId.setText(arrayalistaUsers.get(position).getId());
+    tvCliente.setText(arrayalistaUsers.get(position).getCliente());
+    return view;
 
     }
 }

@@ -6,10 +6,30 @@
     <string name="Plataforma">Plataforma</string>
     <string name="Cliente">Cliente</string>
     <string name="Pedido">Pedido</string>
-    <string name="Fecha">Fecha</string>
+    <string name="Fecha">Fecha DD/MM/AAAA</string>
     <string name="Title">PEDIDOS</string>
     <string name="floatBtn">+</string>
     <string name="modificar">Modificar</string>
     <string name="id">  ID</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Inicio_sesion">Inicio De Sesión</string>
+    <string name="inicio_btn">Iniciar Sesión</string>
+    <string name="ttxt_user">Usuario:</string>
+    <string name="ttxt_pwd">Contraseña:</string>
+    <string name="facundo">Marca</string>
+    <string name="registro_de_usuario">Registro de usuario</string>
+    <string name="correo_electronico">Correo electrónico:</string>
+    <string name="marca_mail_com">marca@gmail.com</string>
+    <string name="button">Button</string>
+    <string name="marca123">marca1234</string>
+    <string name="registrarseTxt">No tienes usuario?</string>
+    <string name="registrate">Registrate</string>
+    <string name="cliente">cliente</string>
+    <string name="introduce_el_email_de_tu_cuenta">Introduce el Email de tu cuenta</string>
+    <string name="recuperar_contrase_a">Recuperar Contraseña</string>
+    <string name="enviar">Enviar</string>
+    <string name="todo">TODO</string>
+    <string name="_1_1_2020">1/1/2020</string>
+    <string name="registrarse">Registrarse</string>
 
 </resources>

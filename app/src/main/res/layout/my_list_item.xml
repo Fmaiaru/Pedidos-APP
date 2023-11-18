@@ -7,6 +7,21 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/tvCliente"
+        android:layout_width="282dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:text="nombre"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/tvId"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </TextView>
+
+    <TextView
         android:id="@+id/tvId"
         android:layout_width="35dp"
         android:layout_height="35dp"
@@ -17,23 +32,20 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvCliente"
-        app:layout_constraintVertical_bias="0.043"></TextView>
+        app:layout_constraintVertical_bias="0.0"></TextView>
 
     <TextView
-        android:id="@+id/tvCliente"
-        android:layout_width="282dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="4dp"
-        android:gravity="center_vertical"
-        android:text="nombre"
-        android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/tvId"
-        app:layout_constraintTop_toTopOf="parent">
+        android:id="@+id/cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/cliente"
+        app:layout_constraintBottom_toTopOf="@+id/tvCliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintStart_toStartOf="parent" />
 
-
-    </TextView>
 </androidx.constraintlayout.widget.ConstraintLayout>

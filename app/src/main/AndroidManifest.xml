@@ -16,13 +16,13 @@
         android:theme="@style/Theme.Pedidos"
         tools:targetApi="31">
         <activity
-            android:name=".Editar"
+            android:name=".Recuperar"
             android:exported="true" />
         <activity
-            android:name=".Detalles"
+            android:name=".Cargando"
             android:exported="true" />
         <activity
-            android:name=".Home"
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,9 +31,21 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Registrar"
+            android:exported="true" />
+        <activity
+            android:name=".Editar"
+            android:exported="true" />
+        <activity
+            android:name=".Detalles"
+            android:exported="true" />
+        <activity
+            android:name=".Home"
+            android:clearTaskOnLaunch="true"
+            android:exported="true" />
+        <activity
             android:name=".insertar"
-            android:exported="true"></activity>
-
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -28,6 +28,8 @@ public class Editar extends AppCompatActivity {
     Button btnSend;
     int position;
 
+    String tabla;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +43,13 @@ public class Editar extends AppCompatActivity {
         txtTotal = findViewById(R.id.txtTotal);
         txtSeña = findViewById(R.id.txtSeña);
 
+        Intent editar =getIntent();
+        position=editar.getExtras().getInt("position");
+        tabla=editar.getStringExtra("tabla");
+
         btnSend=findViewById(R.id.btnSend);
         Intent intent = getIntent();
-        position=intent.getExtras().getInt("position");
+
 
         txtId.setText(Home.users.get(position).getId());
         txtDate.setText(Home.users.get(position).getFecha());
@@ -78,7 +84,7 @@ public class Editar extends AppCompatActivity {
                     public void onResponse(String response) {
 
                         Toast.makeText(Editar.this, response, Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), Home.class));
+                        startActivity(new Intent(getApplicationContext(), Cargando.class));
                         finish();
                         progressDialog.dismiss();
                     }
@@ -103,6 +109,7 @@ public class Editar extends AppCompatActivity {
                 params.put("plataforma",plataforma);
                 params.put("total",total);
                 params.put("seña",seña);
+                params.put("tabla",tabla);
 
 
                 return params;
